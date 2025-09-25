@@ -29,16 +29,18 @@ Para **entradas binarias** que representen el número a mostrar podemos **crear 
 | 1   | 1   | 1   | 0   |      | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1    |
 | 1   | 1   | 1   | 1   |      | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1    |
 Esto resulta en las funciones:
-$$f_a=\bar{x}\bar{y}\bar{z}\bar{w}+\bar{x}\bar{y}z\bar{w}+\bar{x}\bar{y}zw+\bar{x}y\bar{z}w+\bar{x}yzw+x\bar{y}\bar{z}\bar{w}+x\bar{y}\bar{z}w$$
-$$=\bar{x}\bar{y}(\bar{z}\bar{w}+z\bar{w}+zw)+\bar{x}y(zw+\bar{z}w)+x\bar{y}(\bar{z}\bar{w}+\bar{z}w)$$
-$$=\bar{y}\bar{z}\bar{w}+\bar{x}\bar{y}z+\bar{x}yw+x\bar{y}\bar{z}$$
-$$f_b=\bar{x}\bar{y}\bar{z}\bar{w}+\bar{x}\bar{y}\bar{z}w+\bar{x}\bar{y}z\bar{w}+\bar{x}\bar{y}zw+\bar{x}y\bar{z}\bar{w}+\bar{x}yzw+x\bar{y}\bar{z}\bar{w}+x\bar{y}\bar{z}w$$
-$$=\bar{x}\bar{y}(\bar{z}\bar{w}+\bar{z}w+z\bar{w}+zw)+\bar{x}y(\bar{z}\bar{w}+zw)+x\bar{y}(\bar{z}\bar{w}+\bar{z}w)$$
-$$=\bar{x}\bar{y}(\bar{z}+z)+\bar{x}y(\bar{z}\bar{w}+zw)+x\bar{y}\bar{z}$$
-$$=\bar{x}\bar{y}+\bar{x}y(\bar{z}\bar{w}+zw)+x\bar{y}\bar{z}$$
-$$=\bar{x}(\bar{y}+y(\bar{z}\bar{w}+zw))+x\bar{y}\bar{z}$$
-$$=\bar{x}(\bar{y}+\bar{z}\bar{w}+zw)+x\bar{y}\bar{z}$$
-$$=\bar{x}\bar{y}+\bar{x}\bar{z}\bar{w}+\bar{x}zw+x\bar{y}\bar{z}$$
-$$=\bar{y}(\bar{x}+x\bar{z})+\bar{x}(\bar{z}\bar{w}+zw)$$
-$$=\bar{y}(\bar{x}+\bar{z})+\bar{x}(\bar{z}\bar{w}+zw)$$
-$$f_c=$$
+$f_a=\bar{x}\bar{y}\bar{w}+\bar{x}\bar{y}z+x\bar{y}\bar{z}+xy\bar{w}$
+
+$f_b=\bar{x}\bar{y}+\bar{y}\bar{z}+\bar{x}zw+\bar{x}\bar{z}\bar{w}$
+
+$f_c=\bar{x}w+\bar{x}y+\bar{y}\bar{z}$
+
+$f_d=\bar{x}z\bar{w}+\bar{x}\bar{y}z+\bar{y}\bar{z}\bar{w}+\bar{x}y\bar{z}w$
+
+$f_e=\bar{x}z\bar{w}+\bar{y}\bar{z}\bar{w}$
+
+$f_f=x\bar{y}\bar{z}+\bar{x}y\bar{w}+\bar{x}y\bar{z}+\bar{x}\bar{z}\bar{w}$
+
+$f_g=\bar{x}y+\bar{x}z+x\bar{y}\bar{z}$
+
+$f_{pd}=xy+xz$

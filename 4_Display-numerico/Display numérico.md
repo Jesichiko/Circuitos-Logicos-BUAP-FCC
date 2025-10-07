@@ -10,37 +10,99 @@ Estos segmentos están representados con **letras**:
 
 Para **entradas binarias** que representen el número a mostrar podemos **crear funciones booleanas** que expresen con que combinaciones de entradas binario se tiene que prender. 
 
-| $x$ | $y$ | $z$ | $w$ | $\|$ | $a$ | $b$ | $c$ | $d$ | $e$ | $f$ | $g$ | $pd$ |
-| --- | --- | --- | --- | ---- | --- | :-- | --- | --- | --- | --- | --- | ---- |
-| 0   | 0   | 0   | 0   |      | 1   | 1   | 1   | 1   | 1   | 1   | 0   | 0    |
-| 0   | 0   | 0   | 1   |      | 0   | 1   | 1   | 0   | 0   | 0   | 0   | 0    |
-| 0   | 0   | 1   | 0   |      | 1   | 1   | 0   | 1   | 1   | 0   | 1   | 0    |
-| 0   | 0   | 1   | 1   |      | 1   | 1   | 1   | 1   | 0   | 0   | 1   | 0    |
-| 0   | 1   | 0   | 0   |      | 0   | 1   | 1   | 0   | 0   | 1   | 1   | 0    |
-| 0   | 1   | 0   | 1   |      | 1   | 0   | 1   | 1   | 0   | 1   | 1   | 0    |
-| 0   | 1   | 1   | 0   |      | 0   | 0   | 1   | 1   | 1   | 1   | 1   | 0    |
-| 0   | 1   | 1   | 1   |      | 1   | 1   | 1   | 0   | 0   | 0   | 1   | 0    |
-| 1   | 0   | 0   | 0   |      | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 0    |
-| 1   | 0   | 0   | 1   |      | 1   | 1   | 1   | 0   | 0   | 1   | 1   | 0    |
-| 1   | 0   | 1   | 0   |      | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1    |
-| 1   | 0   | 1   | 1   |      | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1    |
-| 1   | 1   | 0   | 0   |      | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1    |
-| 1   | 1   | 0   | 1   |      | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1    |
-| 1   | 1   | 1   | 0   |      | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1    |
-| 1   | 1   | 1   | 1   |      | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1    |
+| $w$ | $z$ | $y$ | $x$ | $\|$ | $a$ | $b$ | $c$ | $d$ | $e$ | $f$ | $g$ |
+| --- | --- | --- | --- | ---- | --- | :-- | --- | --- | --- | --- | --- |
+| 0   | 0   | 0   | 0   | $0$  | 1   | 1   | 1   | 1   | 1   | 1   | 0   |
+| 0   | 0   | 0   | 1   | $1$  | 0   | 1   | 1   | 0   | 0   | 0   | 0   |
+| 0   | 0   | 1   | 0   | $2$  | 1   | 1   | 0   | 1   | 1   | 0   | 1   |
+| 0   | 0   | 1   | 1   | $3$  | 1   | 1   | 1   | 1   | 0   | 0   | 1   |
+| 0   | 1   | 0   | 0   | $4$  | 0   | 1   | 1   | 0   | 0   | 1   | 1   |
+| 0   | 1   | 0   | 1   | $5$  | 1   | 0   | 1   | 1   | 0   | 1   | 1   |
+| 0   | 1   | 1   | 0   | $6$  | 1   | 0   | 1   | 1   | 1   | 1   | 1   |
+| 0   | 1   | 1   | 1   | $7$  | 1   | 1   | 1   | 0   | 0   | 0   | 1   |
+| 1   | 0   | 0   | 0   | $8$  | 1   | 1   | 1   | 1   | 1   | 1   | 1   |
+| 1   | 0   | 0   | 1   | $9$  | 1   | 1   | 1   | 0   | 0   | 1   | 1   |
+| 1   | 0   | 1   | 0   | $A$  | 1   | 1   | 1   | 0   | 1   | 1   | 1   |
+| 1   | 0   | 1   | 1   | $B$  | 0   | 0   | 1   | 1   | 1   | 1   | 1   |
+| 1   | 1   | 0   | 0   | $C$  | 1   | 0   | 0   | 1   | 1   | 1   | 0   |
+| 1   | 1   | 0   | 1   | $D$  | 0   | 1   | 1   | 1   | 1   | 0   | 1   |
+| 1   | 1   | 1   | 0   | $E$  | 1   | 0   | 0   | 1   | 1   | 1   | 1   |
+| 1   | 1   | 1   | 1   | $F$  | 1   | 0   | 0   | 0   | 1   | 1   | 1   |
 Esto resulta en las funciones:
-$f_a=\bar{x}\bar{y}\bar{w}+\bar{x}\bar{y}z+x\bar{y}\bar{z}+xy\bar{w}$
+$f_a = w + z\bar{y} + \bar{z}y + x$
 
-$f_b=\bar{x}\bar{y}+\bar{y}\bar{z}+\bar{x}zw+\bar{x}\bar{z}\bar{w}$
+$f_b = yx + zy + \bar{z}\bar{x} + w$
 
-$f_c=\bar{x}w+\bar{x}y+\bar{y}\bar{z}$
+$f_c = \bar{y}x + z + w$
 
-$f_d=\bar{x}z\bar{w}+\bar{x}\bar{y}z+\bar{y}\bar{z}\bar{w}+\bar{x}y\bar{z}w$
+$f_d = w + \bar{z}\bar{y}x + zy + z\bar{x}$
 
-$f_e=\bar{x}z\bar{w}+\bar{y}\bar{z}\bar{w}$
+$f_e = \bar{z}x + w(y + z)$
 
-$f_f=x\bar{y}\bar{z}+\bar{x}y\bar{w}+\bar{x}y\bar{z}+\bar{x}\bar{z}\bar{w}$
+$f_f = \bar{y}\bar{x} + z\bar{y} + zx + wy$
 
-$f_g=\bar{x}y+\bar{x}z+x\bar{y}\bar{z}$
+$f_g = w + z(y + \bar{x}) + \bar{z}\bar{y}\bar{x}$
 
-$f_{pd}=xy+xz$
+Esto podemos verlo como **modulos en Verilog** para una placa ****
+```verilog
+module display7seg (
+    input wire w, z, y, x,
+    output wire a, b, c, d, e, f, g
+);
+    assign a = w | (z & ~y) | (~z & y) | x;
+    assign b = (y & x) | (z & y) | (~z & ~x) | w;
+    assign c = (~y & x) | z | w;
+    assign d = w | (~z & ~y & x) | (z & y) | (z & ~x);
+    assign e = (~z & x) | (w & (y | z));
+    assign f = (~y & ~x) | (z & ~y) | (z & x) | (w & y);
+    assign g = w | (z & (y | ~x)) | (~z & ~y & ~x);
+endmodule
+
+```
+
+en el **top-level** tenemos:
+```verilog
+module top_display_un_numero (
+    input wire [3:0] num,   //hexa
+    output wire [6:0] seg,  // segmentos
+    output wire [3:0] an    // seleccion del display
+);
+	// segmentos
+    wire a, b, c, d, e, f, g;
+
+    // dividimos los 4 bits en w,z,y,x
+    display7seg disp(
+        .w(num[3]),
+        .z(num[2]),
+        .y(num[1]),
+        .x(num[0]),
+        .a(a),
+        .b(b),
+        .c(c),
+        .d(d),
+        .e(e),
+        .f(f),
+        .g(g)
+    );
+
+    assign seg = ~{a,b,c,d,e,f,g};
+
+    // encendemos solo el display más a la derecha
+    assign an = 4'b1110;
+endmodule
+
+```
+
+para ejecutarlo:
+En el top (o constraints `.xdc`), conectamos los pines de la forma:
+- `seg[6:0]` → `CA` a `CG`
+- `an[3:0]` → `AN3` a `AN0`
+
+y ejecutamos:
+```verilog
+top_display_un_numero mostrar(
+    .num(4'hB),
+    .seg(seg),
+    .an(an)
+);
+```
